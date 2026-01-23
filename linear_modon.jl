@@ -287,7 +287,7 @@ updatevars!(prob)
 
 # Define output saves:
 
-filename = savename * ".h5"
+filename = savename * ".nc"
 
 if isfile(filename); rm(filename); end
 
