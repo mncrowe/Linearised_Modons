@@ -1,4 +1,4 @@
-include("full_modon.jl")
+include("linearised_modons.jl")
 
 #U = [1.0, -1.0, 1.0, -1.0, 1.0, -1.0]
 #a = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
@@ -28,15 +28,15 @@ include("full_modon.jl")
 
 #end
 
-#μ = -0.9:0.1:0
-#λ = 1.0
+μ = -0.9:0.1:0
+λ = 1.0
 
-#for i in 1:length(μ)
+for i in 1:length(μ)
 
-#    run_modon(GPU(); μ = μ[i], λ, Nx = 2048, Ny = 2048, Lx = 20.48, Ly = 20.48, Wx = 6, Wy = 6,
-#              T = 80, Ns = 10, Nw = 400, save_fields = false, save_window = true)
+    run_modon(GPU(); μ = μ[i], λ, Nx = 2048, Ny = 2048, Lx = 20.48, Ly = 20.48, Wx = 6, Wy = 6,
+              T = 80, Ns = 10, Nw = 400, save_fields = false, save_window = true, linear = true)
 
-#end
+end
 
 μ = 0.2:0.2:2.0
 λ = 1.0
@@ -44,6 +44,6 @@ include("full_modon.jl")
 for i in 1:length(μ)
 
     run_modon(GPU(); μ = μ[i], λ, Nx = 2048, Ny = 2048, Lx = 20.48, Ly = 20.48, Wx = 6, Wy = 6,
-              T = 1000, Ns = 10, Nw = 5000, save_fields = false, save_window = true)
+              T = 1000, Ns = 10, Nw = 5000, save_fields = false, save_window = true, linear = true)
 
 end
