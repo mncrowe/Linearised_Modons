@@ -16,5 +16,7 @@ Source: https://github.com/BtbN/FFmpeg-Builds/releases
 
 To install ffmpeg-master-latest-linux64-gpl.tar.xz:
 
+```
 wget https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
 tar -xf ffmpeg-master-latest-linux64-gpl.tar.xz
+```
